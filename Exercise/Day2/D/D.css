@@ -1,0 +1,20 @@
+div {
+    display: inline-flex;
+    width: 100px;
+    height: 100px;
+}
+
+div#red {
+    background-color: red;
+    align-self: flex-end;
+}
+
+div#green {
+    background-color: green;
+    display: inline-flex;
+}
+
+div#blue {
+    background-color: blue;
+    display: inline-flex;
+}
