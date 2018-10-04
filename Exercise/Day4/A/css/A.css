@@ -1,0 +1,187 @@
+.navbar {
+    background: #fff;
+    border-bottom: solid 1px #fff;
+    opacity: 0.3;
+    columns: #000 !important;
+    font-weight: bold;
+}
+
+nav {
+    background: transparent;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.navbar-light .navbar-brand, .nav-item {
+    color: white !important;
+}
+
+.bg-light {
+    background-color: transparent !important;
+}
+
+header div.jumbotron {
+    position: relative;
+    background-image: url('../img/header.jpeg');
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+    height: 100vh;
+    margin: 0;
+}
+
+header div.container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+}
+
+header h1 {
+    text-transform: uppercase;
+    font-size: 63.5px;
+    font-weight: 700;
+}
+
+header hr {
+    width: 50px;
+    border-width: 3px;
+    border-color: #f05f40;
+}
+
+header button {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    background-color: #f05f40;
+    padding: 15px 30px;
+    border-radius: 300px;
+    border-color: #f05f40;
+}
+section.about {
+    background-color: #f05f40;
+    position:relative;
+}
+
+section.about div.container {
+    color: #fff;
+    width: 58%;
+    height: 80%;
+    justify-content: center;
+    align-items: center;
+}
+
+section.about hr {
+    border-color: #fff;
+    width: 50px;
+    border-width: 3px;
+}
+
+.text-faded {
+    opacity: .7;
+}
+
+section.about p {
+    font-size: 16px;
+}
+
+section.about button {
+    border-radius: 300px;
+    background-color: #fff;
+    padding: 15px 30px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 10%;
+}
+
+section.about button a {
+    color: black;
+    text-decoration: none;
+}
+
+section.services div.container{
+    width: 80%;
+}
+
+section.services hr {
+    border-color: #f05f40;
+    width: 50px;
+    border-width: 3px;
+}
+section.services div.content-icons {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section.services svg {
+    color: red;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #f05f40;
+}
+
+.overlay:hover {
+    opacity: 0.7;
+    z-index: 2;
+}
+
+.project-category {
+    text-transform: uppercase;
+}
+.project-name {
+    font-size: 18px;
+}
+
+section.portfolio div.container-fluid {
+    padding: 0 !important;
+}
+
+
+aside {
+    background-color: #222;
+    height: 40vh;
+    margin: 0;
+}
+aside div.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+}
+
+aside h2 {
+    color: white;
+}
+aside button {
+    text-transform: uppercase;
+    font-weight: 700;
+    background-color: #fff;
+    padding: 15px 30px;
+    border-radius: 300px;
+    border-color: #fff;
+
+}
