@@ -3,4 +3,6 @@ function removeChildElements(id) {
     while(myNode.firstChild) {
         myNode.removeChild(myNode.firstChild);
     };
+    //document.getElementById(id).innerHTML('');
 }
+

@@ -1,0 +1,77 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <header id='header'>
+            <h1>Contacts</h1>
+        </header>
+        <div id="content">
+            <section class="sections" id="new-contact">
+                <h1>Create New Contact</h1>
+                <form id="form1" name="myForm">
+                    <div id="row-name">
+                        <input type='text' name="name" placeholder="Name"/>
+                    </div>
+                    <div id="row-phone">
+                        <input type='text' name="phone" placeholder="Telephone Number"/>
+                    </div>
+                    <div id="row-email">
+                        <input type='text' name="email" placeholder="Email"/>
+                    </div>
+                    <div id="row-submit">
+                        <input type="submit" value="submit"/>
+                    </div>
+                </form>
+            </section>
+            <section class="sections" id="contact-list">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Telephone Number</th>
+                            <th>email</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="row">
+                            <td>Sam</td>
+                            <td>123456789</td>
+                            <td>sam@gmail.com</td>
+                        </tr>
+                        <tr class="row">
+                            <td>Tom</td>
+                            <td>987654321</td>
+                            <td>tom@gmail.com</td>
+                        </tr>
+                        <tr class="row">
+                            <td>Nadim</td>
+                            <td>54678292</td>
+                            <td>nadim@gmail.com</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+        <footer>
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script type='text/javascript'>
+
+            $('tbody').append(
+            `<tr class="row" id="row-4">
+            <td>Peter</td>
+            <td>123456789</td>
+            <td>peter@gmail.com</td>
+            </tr>`);
+
+            $('#row-submit').append(`<input type="reset"
+            value="clear" id="clear-input" class="input"/>`);
+
+            $('#header').html(`<h1> Tommy's  contact list</h1>`);
+
+            $('#contact-list table').css('color','red');
+
+        </script>
+        <script src="js/D.js"></script>
+    </body>
+</html>
