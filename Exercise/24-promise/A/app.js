@@ -30,5 +30,3 @@ function determineFileType(filePath) {
       console.log(err);
     });
 }
-
-determineFileType('./files');
