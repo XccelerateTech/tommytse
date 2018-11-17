@@ -2,12 +2,12 @@ const pg = require('pg');
 const fs = require('fs');
 const csvReadableStream = require('csv-reader');
 
-var inputStream = fs.createReadStream('transaction_record.csv', 'utf8');
+var inputStream = fs.createReadStream(__dirname + '/transaction_record.csv', 'utf8');
 
 var config = {
-    user: 'admin',
-    database: 'tommytks',
-    password: 'test',
+    user: 'tommytks',
+    database: 'postgres',
+    password: 'postgres',
     host: 'localhost',
     port: 5432,
     max: 10,
@@ -21,15 +21,15 @@ async function commands() {
 
     let rows = [];
 
-    inputStream.pipe(CSVReadableStream({ parsedNumbers: true, parseBooleans: true, trim: true }))
-        .on('data', async (row) => {
-            rows.push(row);
+    inputStream.pipe(csvReadableStream({ parsedNumbers: true, parseBooleans: true, trim: true }))//google npm csv-reader for usage
+        .on('data', async (row) => {// any reason to async here??????
+            rows.push(row);//pushing all commands to the rows array
         })
         .on('end', async (data) => {
             await client.query('BEGIN');
             try {
                 for (let row of rows) {
-                    let [action, name, quantity] = row;
+                    let [action, name, quantity] = row;//ES6 standard to declare
                     if (action === 'SELL') {
                         let result = await client.query(`
                     SELECT quantity FROM stock INNER JOIN citrus on stock.citrus_id = citrus.id
