@@ -2,8 +2,8 @@ var pg = require('pg');
 
 var config = {
     user: 'tommytks',
-    database: 'fruits',
-    password: 'password',
+    database: 'postgres',
+    password: 'postgres',
     host: 'localhost',
     port: 5432,
     max: 10, // max number of clients in the pool
@@ -13,8 +13,8 @@ var config = {
 var client = new pg.Client(config);
 
 client.connect();
-
-client.query("SELECT * FROM citrus WHERE color = 'orange'", function(err, results) {
+//query become a string
+client.query('SELECT * FROM citrus WHERE color = $1',['orange'], function(err, results) {//tell pg the index via $
     if(err) {
         console.log(err);
     }
