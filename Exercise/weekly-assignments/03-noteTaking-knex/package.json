@@ -1,0 +1,20 @@
+{
+  "name": "03-notetaking",
+  "version": "1.0.0",
+  "description": "weekly assignment03",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "tommytse",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^6.1.0",
+    "express": "^4.16.4",
+    "express-basic-auth": "^1.1.6",
+    "express-handlebars": "^3.0.0",
+    "knex": "^0.15.2",
+    "path": "^0.12.7",
+    "pg": "^7.6.1"
+  }
+}
