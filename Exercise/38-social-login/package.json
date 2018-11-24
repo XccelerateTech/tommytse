@@ -1,0 +1,25 @@
+{
+  "name": "38-social-login",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "tommytse",
+  "license": "ISC",
+  "dependencies": {
+    "connect-redis": "^3.4.0",
+    "dotenv": "^6.1.0",
+    "express": "^4.16.4",
+    "express-session": "^1.15.6",
+    "fs": "0.0.1-security",
+    "https": "^1.0.0",
+    "passport": "^0.4.0",
+    "passport-facebook": "^2.1.1",
+    "passport-local": "^1.0.0",
+    "redis": "^2.8.0",
+    "socket.io": "^2.1.1",
+    "socket.io.session": "^1.0.13"
+  }
+}
