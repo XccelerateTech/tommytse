@@ -66,7 +66,7 @@ passport.use(
     {
       clientID: process.env.FACEBOOK_ID,
       clientSecret: process.env.FACEBOOK_CLIENT_SECRET,
-      callbackURL: "http://localhost:3000/auth/facebook/callback"
+      callbackURL: "https://localhost:3000/auth/facebook/callback"
     },
     function(accessToken, refreshToken, profile, done) {
       console.log(profile);
@@ -125,10 +125,9 @@ app.get(
 );
 //?????????????? empty response from callback
 app.get(
-  "auth/facebook/callback",
-  passport.authenticate("facebook", { failureRedirect: "/error" }, (req, res) =>
-    res.send("successful login via facebook")
-  )
+  "/auth/facebook/callback",
+  passport.authenticate("facebook", { failureRedirect: "/error" }),
+  (req, res) => res.send("successful login via facebook")
 );
 
 app.get("/login", (req, res) => {
